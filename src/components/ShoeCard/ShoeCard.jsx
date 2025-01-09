@@ -45,10 +45,29 @@ const ShoeCard = ({
         <Row>
           <ColorInfo>{pluralize('Color', numOfColors)}</ColorInfo>
         </Row>
+        {variant !== 'default' &&
+          <Flag style={{
+             '--flag-color': variant === 'on-sale' ? COLORS.primary : COLORS.secondary
+          }}>
+            {variant === 'on-sale' ? 'Sale' : 'Just released!'}
+          </Flag>
+        }
       </Wrapper>
     </Link>
   );
 };
+
+const Flag = styled.div`
+  position: absolute;
+  top: 12px;
+  right: -4px;
+  border-radius: 2px;
+  padding: 7px 9px 8px 11px;
+  background-color: var(--flag-color);
+  color: white;
+  font-size: ${14 / 16}rem;
+  font-weight: 700;
+`
 
 const Link = styled.a`
   text-decoration: none;
@@ -58,6 +77,7 @@ const Link = styled.a`
 `;
 
 const Wrapper = styled.article`
+  position: relative;
 `;
 
 const ImageWrapper = styled.div`
