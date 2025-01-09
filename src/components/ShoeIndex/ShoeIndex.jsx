@@ -50,6 +50,9 @@ const Wrapper = styled.div`
 
 const LeftColumn = styled.div`
   flex: 0 1 250px;
+  position: sticky;
+  top: 64px;
+  align-self: start;
 `;
 
 const MainColumn = styled.div`
