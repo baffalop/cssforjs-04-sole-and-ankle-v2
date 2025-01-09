@@ -46,13 +46,13 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: row-reverse;
   gap: 32px;
+  align-items: baseline;
 `;
 
 const LeftColumn = styled.div`
   flex: 0 1 250px;
   position: sticky;
   top: 64px;
-  align-self: start;
 `;
 
 const MainColumn = styled.div`
@@ -62,6 +62,7 @@ const MainColumn = styled.div`
 const Header = styled.header`
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 `;
 
 const Title = styled.h2`
